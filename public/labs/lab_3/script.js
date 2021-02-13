@@ -10,7 +10,7 @@ let currentslide = 0;
 
 document.querySelector('.left').onclick = () => {
   if (currentslide = 0) {
-    gallery.style.marginRight = '260px';
+    collection.style.marginRight = '260px';
     currentslide += 3;
   }
 }
