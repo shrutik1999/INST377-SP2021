@@ -1,5 +1,5 @@
 const imgul = document.querySelector('.collection')
-const allimages = document.querySelectorAll('.images');
+const allimages = document.querySelectorAll('img');
 
 const carouselArray = [];
 for (let i = 0; i < allimages.length; i++) {
