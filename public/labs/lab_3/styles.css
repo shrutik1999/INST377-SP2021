@@ -5,7 +5,7 @@
     padding: 10px;
   }
   
-  .carousel {
+  .slideshow {
     position: relative;
     width: 398px;
     padding: 10px 40px;
@@ -14,7 +14,7 @@
     background: #eee;
   }
   
-  .carousel img {
+  .slideshow img {
     width: 130px;
     height: 130px;
     /* make it block to remove space around images */
@@ -43,11 +43,11 @@
     cursor: pointer;
   }
   
-  .prev {
+  .left {
     left: 7px;
   }
   
-  .next {
+  .right {
     right: 7px;
   }
   
@@ -71,3 +71,4 @@
   .gallery li {
     display: inline-block;
   }
+  
