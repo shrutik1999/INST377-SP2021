@@ -1,12 +1,9 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
-
- /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
- https://javascript.info/introduction-browser-events */
  
- /*taken and tweaked from javascript.info!!! */
+ /*adapted and tweaked from javascript.info!!! */
 
-body {
+ body {
     padding: 10px;
     background-color: purple;
   }
@@ -18,6 +15,7 @@ body {
     border: 1px solid #CCC;
     border-radius: 15px;
     background: #eee;
+    margin-left: 33%;
   }
   
   .slideshow img {
@@ -77,4 +75,3 @@ body {
   .gallery li {
     display: inline-block;
   }
-  
