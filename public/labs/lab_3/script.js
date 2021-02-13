@@ -1,4 +1,6 @@
 /* Put your javascript in here */
 
-let imgwidth = 130;
-let frame = 3;
+const slideArray = [];
+for (let i = -0; i < document.querySelectorAll('.images')).length; i++){
+    slideArray.push(document.querySelectorAll('.images')[i].dataset.background);
+}
