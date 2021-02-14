@@ -8,6 +8,8 @@ for (let i = 0; i < allimages.length; i++) {
 
 let currentslide = 0;
 
+document.querySelector('.right').onclick = function() {}
+
 document.querySelector('.right').onclick = () => {
   currentslide += 3;
   if (currentslide > 6) {
