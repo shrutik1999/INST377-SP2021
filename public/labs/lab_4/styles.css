@@ -1,0 +1,13 @@
+.flex-outer li,
+.flex-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+    flex: 1 0 120px; /*check what 1 0 is*/
+    max-width: 220px;
+}
+
