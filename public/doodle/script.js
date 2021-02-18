@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let doodlerBottomSpace = 150;
   let isGameOver = false;
   let platformCount = 5;
+  let platforms = [];
 
   function createDoodler() {
     grid.appendChild(doodler);
@@ -33,13 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
       let platGap = 600 / platformCount;
       let newPlatBottom = 100 + i * platGap;
       let newPlatform = new Platform(newPlatBottom);
+      platforms.push(newPlatform);
     }
+  }
+
+  function movePlatforms() {
+      if (doodlerBottomSpace > 200) {
+          //LEFT OFF HERE; YOUTUBE: 20:00
+      }
   }
 
   function start() {
     if (!isGameOver) {
       createDoodler();
       createPlatforms();
+      movePlatforms();
     }
   }
   // attach to button
