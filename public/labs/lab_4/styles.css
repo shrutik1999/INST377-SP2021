@@ -9,7 +9,6 @@ h1 {
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 0 auto;
   }
 
 .flex-outer li,
@@ -28,4 +27,20 @@ h1 {
 .flex-outer > li > label + *,
 .flex-inner {
     flex: 1 0 220px;
+}
+
+.flex-outer li button {
+    padding: 8px 16px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
+}
+
+.flex-inner li{
+    width: 100px;
+}
+
+.flex-inner{
+    justify-content: space-between;
 }
