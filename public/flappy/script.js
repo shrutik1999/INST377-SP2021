@@ -56,16 +56,17 @@ document.addEventListener('DOMContentLoaded' , () => {
       topObstacle.style.left = obstacleLeft + 'px';
 
       if (obstacleLeft === -60) {
-        clearInterval(timerId);
+        clearInterval(timerID);
         gameDisplay.removeChild(obstacle);
         gameDisplay.removeChild(topObstacle);
       }
       // eslint-disable-next-line max-len
-      if ((obstacleLeft > 200) && (obstacleLeft < 280) && (birdLeft === 220)
-      && ((birdBottom < obstacleBottom + 150) || (birdBottom > obstacleBottom + gap - 200))
-      || (birdBottom === 80)) { /* had to adjusted from 0 from example */
-        gameOver();
-        clearInterval(timerId); /* not working the bar still moves */
+      if (
+          obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
+          (birdBottom < obstacleBottom + 150 || birdBottom > obstacleBottom + gap - 200) ||
+          (birdBottom === 80)) { /* had to adjusted from 0 from example */
+            gameOver();
+            clearInterval(timerID); /* not working the bar still moves */
       }
     }
     let timerID = setInterval(moveObstacle, 20);
