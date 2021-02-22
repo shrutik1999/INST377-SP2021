@@ -6,11 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let isGameOver = false;
   let platformCount = 5;
   let platforms = [];
+  let upTimerId;
+  let downTimerID;
 
   function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add('doodler');
-    doodler.style.left = doodlerLeftSpace + 'px';
+    doodler.style.left = doodlerLeftSpace + 'px'; /*adding this line creates issues*/
     doodler.style.bottom = doodlerBottomSpace + 'px';
   }
   createDoodler();
@@ -39,16 +41,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function movePlatforms() {
-      if (doodlerBottomSpace > 200) {
-          //LEFT OFF HERE; YOUTUBE: 20:00
+    if (doodlerBottomSpace > 200) {
+      platforms.forEach(platform => {
+        platform.bottom -= 4;
+        let visual = platform.visual;
+        visual.style.bottom = platform.bottom + 'px';
+      });
+    }
+  }
+
+  function jump() {
+    clearInterval(downTimerID);
+    upTimerId = setInterval(function () {
+      doodlerBottomSpace += 20;
+      doodler.style.bottom = doodlerBottomSpace + 'px';
+      if (doodlerBottomSpace > 350) {
+        fall();
       }
+    }, 30);
+  }
+
+  function fall() {
+    clearInterval(upTimerId);
+    downTimerID = setInterval(function () {
+      doodlerBottomSpace -= 5;
+      doodler.style.bottom = doodlerBottomSpace + 'px';
+      if (doodlerBottomSpace <= 0) {
+        gameOver()
+      }
+    },30);
+  }
+
+  function gameOver() {
+    console.log('game over');
+    isGameOver = true;
+    clearInterval(upTimerId);
+    clearInterval(downTimerID);
   }
 
   function start() {
     if (!isGameOver) {
-      createDoodler();
       createPlatforms();
-      movePlatforms();
+      createDoodler();
+      setInterval(movePlatforms, 30);
+      jump();
     }
   }
   // attach to button
