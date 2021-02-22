@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add('doodler');
-    doodler.style.left = doodlerLeftSpace + 'px'; /*adding this line creates issues*/
+    doodler.style.left = doodlerLeftSpace + 'px'; /*adding this line creates issues, left off at 30 mins*/
     doodler.style.bottom = doodlerBottomSpace + 'px';
   }
   createDoodler();
