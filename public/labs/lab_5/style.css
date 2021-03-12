@@ -1,5 +1,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"; /* Bulma CSS */
 
 #mapid {
-    height: 180px;
+    height: 500px;
+    width: 500px;
 }
