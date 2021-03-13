@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Shruti Kumar Lab 5</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="stylecss" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/> <!--link Leaflet CSS-->
@@ -12,19 +12,19 @@
    crossorigin=""></script> <!--link Leaflet JS-->
 </head>
 <body>
-    <h1>Shruti Kumar Lab 5</h1>
     <div class="container">
-        <div class="column is-half">
-        <form class="column is-6"> <!--made into column on the left, but shifts down when searching; needs to be fixed-->
-            <input type="text" class="search" placeholder="name or type">
-            <button type="submit" id="submit" name="submit">SUBMIT</button> <!--added submit form button-->
-            <ul class="suggestions">
+      <div class="column is-6">
+        <h1>Shruti Kumar Lab 5</h1>
+        <form action="/">
+          <input type="text" class="search" placeholder="name or type">
+          <button type="submit" id="submit" name="submit">SUBMIT</button> <!--added submit form button-->
+          <ul class="suggestions">
 
-            </ul>
+          </ul>
         </form>
-        </div>
-     <div class="column is-6 is-offset-6" id="mapid"></div>
-    </div>
+      </div>
+      <div class="column is-6 is-offset-6" id="mapid"></div>
+  </div>
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
